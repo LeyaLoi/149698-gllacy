@@ -1,1 +1,49 @@
-div>ul>li*6 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>catalog</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!-- <link href="styles/normalize.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <div class="breadcrumbs">
+      <ul>
+        <li><a href="">Главная</a></li>
+        <li><a href="">Каталог</a></li>
+        <li><a href="">Сливочное</a></li>
+      </ul>
+    </div>
+    <h1 class="title">Сливочное мороженое</h1>
+    <div class="form">
+      <form action="https://echo.htmlacademy.ru" name="filter" method="post">
+        <div class="layout">
+          <label for="sort">Сортировка:</label>
+          <button id="sort">по популярности</button>
+        </div>
+        <div class="layout">
+          <label for=""> <span class="price-min">100</span>р. &mdash;
+            <span class="price-max">500</span> р.Цена:</label>
+          <div class="filter-controls">
+              <div class="scale">
+                  <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+          </div>
+        </div>
+        <div class="layout">
+          <label for=""></label>
+          <input type="text">
+        </div>
+        <div class="layout">
+          <label for=""></label>
+          <button class="btn-transparent" type="submit">Применить</button>
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>

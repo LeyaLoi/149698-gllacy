@@ -294,3 +294,81 @@ background-repeat: no-repeat;
 #btn-3:checked ~ .site-wrapper label[for="btn-3"] {
   background-color: #ffffff;
 }
+/*-----------------catalog----------------*/
+.layout {
+  display: inline-block;
+  vertical-align: top;
+}
+.layout label {
+  display: block;
+  color: #ffffff;
+
+}
+.layout button {
+  position: relative;
+  /*display: none;*/
+  color: #ffffff;
+  padding-right: 20px;
+  border-radius: 20px 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.layout button:hover {
+  position: relative;
+  color: #323232;
+  padding-right: 20px;
+  border-radius: 20px 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.layout button::after {
+  content: "";
+  top:6px;
+  right: 5px;
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  background-image:  url("../img/icon-down.svg");
+}
+.layout button:hover::after {
+  content: "";
+  top:6px;
+  right: 5px;
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  background-image:  url("../img/icon-down-hover.svg");
+}
+.filter-controls {
+    position: relative;
+    margin-bottom: 32px;
+}
+.filter-controls .scale {
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.filter-controls .bar {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.filter-controls .toggle {
+    position: absolute;
+    top: -9px;
+    width: 4px;
+    height: 4px;
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+.filter-controls .toggle-min {
+    left: 0;
+}
+.filter-controls .toggle-max {
+    left: 80%;
+}
+.filter-controls .toggle:hover {
+    background-color: #1c4f80;
+}
