@@ -98,7 +98,10 @@ img {
 .nav-block > li >  a:active {
   box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.7);
 }
-.nav-block2 {
+.nav-block  li:hover  .nav-block2 {
+  display: block;
+}
+.nav-block li .nav-block2 {
   position: absolute;
   top: 60px;
   display: none;
@@ -115,9 +118,12 @@ img {
   color: #000000;
   text-decoration: none;
 }
-.nav-block > li:hover .nav-block2 {
+ul.nav-block  li:hover > ul.nav-block2 {
+  position: absolute;
   display: block;
+  width: 200px;
 }
+/*---------------главное меню справа------------*/
 .mini-menu {
   float: right;
   position: relative;
@@ -294,6 +300,15 @@ img {
   background-color: #ffffff;
 }
 /*-----------------catalog----------------*/
+
+
+
+/*-----------------main---------------------*/
+.info-wrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
 .layout {
   display: inline-block;
   vertical-align: top;
@@ -384,14 +399,85 @@ img {
 .layout .hidden {
   color: transparent;
 }
+.layout .border {
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+.layout .border:hover {
+  background-color: #ffffff;
+}
 .btn-transparent {
-    /*display: block;*/
+    display: block;
     font-size: 14px;
     line-height: 21px;
-    color: #ffffff;
-    background-color: transparent;
-    border: none;
-    /*border-radius: 2px;*/
     outline: none;
     cursor: pointer;
+    /*position: relative;*/
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ffffff;
+}
+.layout .btn-transparent:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+.layout .btn-transparent:active {
+  color: #000000;
+  background-color: #eaeaea;
+  border: none;
+  box-shadow: inset 0 2px 2px 0 rgba(1, 1, 1, 0.5);
+}
+/*----------------paginator---------------*/
+
+.paginator {
+  float: right;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.paginator a {
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  padding: 8px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: 50%;
+
+}
+.paginator a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.paginator a:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+.paginator .current {
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.paginator .prev {
+  /*margin-right: 10px;*/
+  background-image: url(../img/icon-prev.svg);
+  background-repeat: no-repeat;
+  background-position: 0 10px;
+}
+.paginator .next {
+  margin-left: 10px;
+  background-image: url(../img/icon-next.svg);
+  background-repeat: no-repeat;
+  background-position: 0 10px;
+}
+.paginator .prev:hover,
+.paginator .next:hover {
+  color: inherit;
+  background-color: inherit;
+}
+.paginator .disabled {
+  opacity: 0.5;
 }
