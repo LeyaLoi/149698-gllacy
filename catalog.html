@@ -20,27 +20,47 @@
     <div class="form">
       <form action="https://echo.htmlacademy.ru" name="filter" method="post">
         <div class="layout">
-          <label for="sort">Сортировка:</label>
-          <button id="sort">по популярности</button>
+          <p class="layout-name">Сортировка:</p>
+          <div class="background popular">по популярности</div>
         </div>
         <div class="layout">
-          <label for=""> <span class="price-min">100</span>р. &mdash;
-            <span class="price-max">500</span> р.Цена:</label>
-          <div class="filter-controls">
+          <p class="layout-name">
+            <span class="price-min">100</span>р. &mdash;
+            <span class="price-max">500</span> р.Цена:</p>
+          <div class="background bg">
+            <div class="filter-controls">
               <div class="scale">
                   <div class="bar"></div>
               </div>
               <div class="toggle toggle-min"></div>
               <div class="toggle toggle-max"></div>
+           </div>
+         </div>
+        </div>
+        <div class="layout">
+          <p class="layout-name">Жирность:</p>
+          <div class="background">
+            <label><input type="radio" name="fat" value="0 %">0 %</label>
+            <label><input type="radio" name="fat" value="до 10 %" checked>до 10 %</label>
+            <label><input type="radio" name="fat" value="до 30 %">до 30 %</label>
+            <label><input type="radio" name="fat" value="выше 30 %">выше 30 %</label>
           </div>
         </div>
         <div class="layout">
-          <label for=""></label>
-          <input type="text">
+          <p class="layout-name">Наполнители:</p>
+          <div class="background">
+            <label><input type="checkbox" name="chocolad" checked>шоколадные</label>
+            <label><input type="checkbox" name="sugar" checked>сахарные присыпки</label>
+            <label><input type="checkbox" name="fruit">фрукты</label>
+            <label><input type="checkbox" name="syrup">сироп</label>
+            <label><input type="checkbox" name="jam">джемы</label>
+          </div>
         </div>
         <div class="layout">
-          <label for=""></label>
-          <button class="btn-transparent" type="submit">Применить</button>
+          <p class="layout-name hidden">1</p>
+          <div class="background ">
+            <input class="btn-transparent" type="submit" value="Применить">
+          </div>
         </div>
       </form>
     </div>
