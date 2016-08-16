@@ -123,7 +123,7 @@ ul.nav-block  li:hover > ul.nav-block2 {
   display: block;
   width: 200px;
 }
-/*---------------главное меню справа------------*/
+/*---------------справа  в шапке меню пользователя------------*/
 .mini-menu {
   float: right;
   position: relative;
@@ -298,6 +298,57 @@ ul.nav-block  li:hover > ul.nav-block2 {
 #btn-2:checked ~ .site-wrapper label[for="btn-2"],
 #btn-3:checked ~ .site-wrapper label[for="btn-3"] {
   background-color: #ffffff;
+}
+/*------------------секция акции-----------------*/
+.sale-wrap {
+  float: left;
+  width: 48.2%;
+  margin-top: 40px;
+  margin-right: 2.2%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  background-image: url("../img/fon-malina.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  color: #ffffff;
+}
+.sale-wrap:nth-child(2) {
+  margin-right: 0;
+  background-image: url("../img/fon-chocolate.png");
+}
+.sale-wrap .sale-header,
+.sale-wrap .sale-text {
+  /*padding: 20px 20px;*/
+
+}
+.sale-wrap .sale-buy {
+  float: right;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 12px 20px;
+  margin-top: 10px;
+}
+/*-----------------section ices----------------------------*/
+.ices .ice-item {
+  float: left;
+  width:23.0%;
+  margin-right: 2.2%;
+}
+.ices .ice-item:last-child {
+  margin-right: 0;
+}
+.ices .hit {
+
+}
+.ices .hit::before {
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/hit.png");
+  background-repeat: no-repeat;
+  border: 5px solid red;
 }
 /*-----------------catalog----------------*/
 
