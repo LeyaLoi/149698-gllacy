@@ -14,6 +14,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  color:#ffffff;
+  text-decoration: none;
+}
 .clearfix {
   content: "";
   display: table;
@@ -51,77 +55,85 @@ img {
   background-color: red;
 }*/
 .main-header {
-    position: relative;
-    font-weight: bold;
-    color: #ffffff;
+  position: relative;
+  font-weight: bold;
+  color: #ffffff;
 }
 .main-header .main-logo {
-    position: absolute;
-    left: 0px;
-    top:10px;
+  position: absolute;
+  left: 0px;
+  top:10px;
 }
 .main-navigation {
-    float:left;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 0px;
+  float:left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0px;
 }
-.nav-block > li {
+.nav-block > .nav-item {
   position: relative;
   display: inline-block;
   vertical-align: top;
   /*width: 20%;*/
   padding-top: 20px;
   padding-right: 27px;
-  font-size: 16px;
-  line-height: 18px;
 }
-.nav-block > li:nth-child(1) {
+.nav-block > .nav-item:first-child {
   margin-left: 163px;
 }
-.nav-block > li >  a {
+.nav-item >  a {
   display: block;
   padding: 10px;
   font-weight: bold;
-  color: #ffffff;
-  /* text-decoration: none; */
+  font-size: 16px;
+  line-height: 18px;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
 }
-.nav-block  > li > a:hover {
+.nav-item > a:hover {
   font-weight: bold;
-  color: #000000;
-  text-decoration: none;
+  color: #323232;
   background-color: #ffffff;
   border-radius: 20px 20px;
 }
-.nav-block > li >  a:active {
+.nav-item > a:active {
   box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.7);
 }
-.nav-block  li:hover  .nav-block2 {
+.nav-item:hover  .nav-block2 {
   display: block;
 }
-.nav-block li .nav-block2 {
+ .nav-block2 {
   position: absolute;
   top: 60px;
+  left: 0;
+  z-index: 5;
   display: none;
-  width: 200px;
   margin:0;
   padding:0;
-  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  background-color: #f8f7f3;
   border-radius: 5px;
   list-style: none;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .5);
 }
-.nav-block2  a {
+.nav-block2  .sub a {
   display: block;
-  padding: 10px;
-  color: #000000;
-  text-decoration: none;
+  padding: 7px 20px;
+  color: #323232;
+  white-space: nowrap;
 }
-ul.nav-block  li:hover > ul.nav-block2 {
-  position: absolute;
-  display: block;
-  width: 200px;
+.nav-block2 li:first-child {
+  margin: 0 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-bottom: 1px solid #d1d0cc;
+}
+.sub.sub-active a {
+  background-color: #D07058;
+  color: #ffffff;
 }
 /*---------------справа  в шапке меню пользователя------------*/
 .mini-menu {
