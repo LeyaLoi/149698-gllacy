@@ -84,6 +84,7 @@ a {
   margin-left: 163px;
 }
 .nav-item >  a {
+
   display: block;
   padding: 10px;
   font-size: 16px;
@@ -91,13 +92,20 @@ a {
   font-weight: 700;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
 }
-.nav-item >  a::after {
+.nav-item   span {
+  position: relative;
+}
+.nav-item   span::after {
   content: "";
   width: 100%;
-  border-bottom: 1px solid rgba(255,255,255, 0.4);
+  padding: 0;
+  border-bottom: 1px solid rgba(255,255,255, 0.2);
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
+}
+.nav-item:hover   span::after {
+  display: none;
 }
 .nav-item > a:hover {
   font-weight: bold;
