@@ -151,15 +151,25 @@ a {
 .nav-block2 a:active {
   background-color: #f6b5a5;
 }
-.nav-block2 li:first-child {
-  margin: 0 7px;
-  /*padding-top: 10px;
-  padding-bottom: 10px;*/
-  /*padding-left: 20px;*/
-  border-bottom: 1px solid #d1d0cc;
+.sub .first {
+  display: block;
+  padding: 7px 7px 0 7px;
+  color: #323232;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 700;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
 }
-.nav-block2 li:last-child a {
+.nav-block2  .new {
+  display: block;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  border-bottom: 1px solid #d1d0cc;
+}
+.nav-item .last {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
