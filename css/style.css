@@ -84,7 +84,6 @@ a {
   margin-left: 163px;
 }
 .nav-item >  a {
-
   display: block;
   padding: 10px;
   font-size: 16px;
@@ -96,11 +95,11 @@ a {
   position: relative;
 }
 .nav-item   span::after {
+  position: absolute;
   content: "";
   width: 100%;
   padding: 0;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
-  position: absolute;
   bottom: 0;
   left: 0;
 }
@@ -154,13 +153,13 @@ a {
 }
 .nav-block2 li:first-child {
   margin: 0 7px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+  /*padding-top: 10px;
+  padding-bottom: 10px;*/
+  /*padding-left: 20px;*/
   border-bottom: 1px solid #d1d0cc;
   font-weight: 700;
 }
-.nav-block2 a:last-child {
+.nav-block2 li:last-child a {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -364,7 +363,7 @@ a {
   margin-right: 2.2%;
   padding: 20px 20px;
   box-sizing: border-box;
-  background-image: url("../img/fon-malina.png");
+  background-image: url("../img/bg-raspberry.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
@@ -372,7 +371,7 @@ a {
 }
 .sale-wrap:nth-child(2) {
   margin-right: 0;
-  background-image: url("../img/fon-chocolate.png");
+  background-image: url("../img/bg-chocolate.png");
 }
 .sale-wrap .sale-header,
 .sale-wrap .sale-text {
@@ -387,25 +386,65 @@ a {
 }
 /*-----------------section ices----------------------------*/
 .ices .ice-item {
+  position: relative;
   float: left;
-  width:23.0%;
-  margin-right: 2.2%;
+  width:22.2%;
+  padding: 10px;
+  margin-right: 1.0%;
+  margin-top: 40px;
+  text-align: center;
 }
-.ices .ice-item:last-child {
+.ices .ice-item:nth-child(4n) {
   margin-right: 0;
 }
-/*.ices .hit {
-
-}*/
+.ices .ice-foto {
+  position: relative;
+}
+.ices .hit {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
 .ices .hit::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 61px;
   height: 61px;
   background-image: url("../img/hit.png");
   background-repeat: no-repeat;
-  border: 5px solid red;
+  /*border: 5px solid red;*/
 }
+.ice-item a {
+  border-bottom: 1px solid #B5C4BC;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+.ice-item .slide-btn {
+  /*position: absolute;*/
+  display: none;
+  bottom: 10px;
+  margin: 0 auto;
+  margin-top: 23px;
+  font-size: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+
+}
+.ice-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: -23px;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, .15);
+}
+.ice-item:hover .slide-btn {
+  display: block;
+}
+
+
+
 /*-----------------catalog----------------*/
 
 
