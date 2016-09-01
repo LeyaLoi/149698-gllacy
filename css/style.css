@@ -62,8 +62,8 @@ a {
 }
 .main-header .main-logo {
   position: absolute;
-  left: 0px;
-  top:10px;
+  left: -4px;
+  top: 10px;
 }
 .main-navigation {
   float:left;
@@ -78,14 +78,14 @@ a {
   vertical-align: top;
   /*width: 20%;*/
   padding-top: 20px;
-  padding-right: 27px;
+  padding-right: 5px;
 }
 .nav-block > .nav-item:first-child {
-  margin-left: 163px;
+  margin-left: 127px;
 }
 .nav-item >  a {
   display: block;
-  padding: 10px;
+  padding: 9px 12px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
@@ -106,7 +106,8 @@ a {
 .nav-item:hover   span::after {
   display: none;
 }
-.nav-item > a:hover {
+.nav-item > a:hover,
+.nav-item:hover > a {
   font-weight: bold;
   color: #323232;
   background-color: #f7f6f3;
@@ -119,7 +120,7 @@ a {
  .nav-block2 {
   position: absolute;
   top: 60px;
-  left: 0;
+  left: -7px;
   z-index: 5;
   display: none;
   margin:0;
@@ -138,7 +139,7 @@ a {
 
 .nav-block2 a {
   display: block;
-  padding: 7px 20px;
+  padding: 8px 20px;
   color: #323232;
   white-space: nowrap;
   font-size: 14px;
@@ -153,7 +154,7 @@ a {
 }
 .sub .first {
   display: block;
-  padding: 7px 7px 0 7px;
+  padding: 11px 7px 0 7px;
   color: #323232;
   white-space: nowrap;
   font-size: 14px;
@@ -173,7 +174,7 @@ a {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-/*----------добавить класс в 26 строку----------*/
+/*----------добавить класс в 26 строку catalog.html----------*/
 .sub.sub-active a {
   background-color: #D07058;
   color: #ffffff;
@@ -187,10 +188,38 @@ a {
 }
 .mini-menu ul {
   padding-top: 23px;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
   list-style: none;
   font-size: 0px;
 }
+.search-box,
+.login-box,
+.cart-box {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  font-size: 16px;
+  background-color: #F8F7F4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+a.search:hover + .search-box,
+a.login:hover .login-box,
+a.basket:hover .cart-box {
+  display: block;
+}
+.search-box {
+  width: 344px;
+  padding: 15px;
+  z-index: 2;
+}
+.search-form input {
+  width: 310px;
+  border-radius: 5px;
+  padding: 9px 11px;
+}
+
 .mini-menu li {
   display: inline-block;
   vertical-align: top;
@@ -201,7 +230,7 @@ a {
   padding: 10px;
   padding-left: 40px;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 16px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -221,14 +250,14 @@ a {
   background-repeat: no-repeat;
 }
 .mini-menu a.search {
-  font-size: 0px;
-  line-height: 0px;
-  padding: 16px 16px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 8px 18px;
   border-radius: 50% 50%;
 }
 .mini-menu a.search::before {
-  top: 7px;
-  left: 7px;
+  top: 8px;
+  left: 9px;
   width: 20px;
   height: 20px;
   background-image:  url("../img/icon-search.svg");
@@ -400,17 +429,20 @@ a {
   float: left;
   width:22.2%;
   padding: 10px;
-  margin-right: 1.0%;
+  padding-bottom: 15px;
+  margin-right: 2.2%;
   margin-top: 40px;
   text-align: center;
+  box-sizing: border-box;
 }
 .ices .ice-item:nth-child(4n) {
-  margin-right: 0;
+  margin-right: 0px;
 }
 .ices .ice-foto {
   position: relative;
 }
-.ices .hit {
+.ices .hit,
+.ices .ice-price {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -424,7 +456,13 @@ a {
   height: 61px;
   background-image: url("../img/hit.png");
   background-repeat: no-repeat;
-  /*border: 5px solid red;*/
+}
+.ices .ice-price {
+  bottom: 20px;
+  left: 0;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
 }
 .ice-item a {
   border-bottom: 1px solid #B5C4BC;
@@ -432,22 +470,24 @@ a {
   line-height: 22px;
   font-weight: 500;
 }
+.ice-item:hover a.ice-name {
+  /*border: none;*/
+}
 .ice-item .slide-btn {
-  /*position: absolute;*/
   display: none;
-  bottom: 10px;
   margin: 0 auto;
   margin-top: 23px;
   font-size: 18px;
   line-height: 24px;
   white-space: nowrap;
-
+  /*z-index: 10;*/
 }
 .ice-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  margin-bottom: -23px;
+  margin-bottom: -76px;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, .15);
+  z-index: 10;
 }
 .ice-item:hover .slide-btn {
   display: block;
